@@ -5,6 +5,8 @@
  * Rectangle.java
  */
 
+package edu.unm.cs583;
+
 // Class declaration
 public class Rectangle {
 
