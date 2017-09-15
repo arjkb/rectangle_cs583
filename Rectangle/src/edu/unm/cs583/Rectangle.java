@@ -83,22 +83,22 @@ public class Rectangle {
 		 * with this implementation.
 		 */
 				// UL corner of r is in 'this'
-		return contains(r.x, r.y) 
+//		return contains(r.x, r.y) 
 				// UR corner of r is in 'this'
-			|| contains(r.x, r.y + r.height)
+//			|| contains(r.x, r.y + r.height)
 				// LL corner of r is in 'this'
-			|| contains(r.x + r.width, r.y)
+//			|| contains(r.x + r.width, r.y)
 				// UL corner of r is in 'this'
-			|| contains(r.x + r.width, r.y + r.height)
+//			|| contains(r.x + r.width, r.y + r.height)
 				// At least one extreme x value of r is between
 				//  the exteme x values of 'this'
-			|| ((x <= r.x && r.x <= x + width 
-					|| x <= r.x + r.width && r.x + r.width <= x + width)
+//			|| ((x <= r.x && r.x <= x + width 
+//					|| x <= r.x + r.width && r.x + r.width <= x + width)
 					// And at least one extreme y value of 'this' is
 					//  is between the exteme values of r
-				&&
-				(r.y <= y && y <= r.y + r.height
-					|| r.y <= y + height && y + height <= r.y + r.height));
+//				&&
+//				(r.y <= y && y <= r.y + r.height
+//					|| r.y <= y + height && y + height <= r.y + r.height));
 		
 		/**
 		 * A correct solution
@@ -114,13 +114,13 @@ public class Rectangle {
 		 * these statements.
 		 */
 				// 'this' starts further right than r ends
-//		return !(r.x + r.width <= x 
+		return !(r.x + r.width <= x 
 				// r starts further right than 'this' ends 
-//			|| x + width <= r.x
+			|| x + width <= r.x
 				// 'this' starts lower than r ends
-//			|| r.y + r.height <= y 
+			|| r.y + r.height <= y 
 				// r starts lower than r ends
-//			|| y + height <= r.y);		
+			|| y + height <= r.y);		
 		
 	}
 	
